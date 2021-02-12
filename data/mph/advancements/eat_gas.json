@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "eat": {
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "item": "suspicious_stew",
+                    "nbt": "{ac_gas:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "mph:eating/eatgas"
+    }
+}
