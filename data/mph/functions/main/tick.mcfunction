@@ -13,6 +13,9 @@ execute as @e[type=armor_stand,tag=brewer] at @s if block ~ ~ ~ air run function
 # Brewer brewing
 execute as @e[type=armor_stand,tag=brewer] at @s run function mph:brewer/brewing
 
+## EFFECTS ##
+execute as @e[ tag=ac_effect_tagged ] at @e[ tag=ac_effect_tagged ] run function mph:effects/triggereffects
+
 
 ## EPHEDRINE ##
 execute as @e[scores={ephedrine=1..}] at @s if predicate mph:chances/1_in_10 run summon item ^ ^1.2 ^ {PickupDelay:20,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:tall_grass",Count:1b,tag:{display:{Name:'{"text":"Ephedra","color":"green","italic":false}'},ephedra:1b}}}
