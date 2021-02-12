@@ -3,13 +3,13 @@
 #note: seha told me to make
 
 #ejecting false fuel
-execute if data block ~ ~ ~ {BurnTime: 0s} unless block ~ ~ ~ minecraft:furnace{Items:[{id:"minecraft:suspicious_stew",Count:1b,tag:{Tags:["ac_fuel_gas"]}}]} unless block ~ ~ ~ minecraft:furnace{Items:[]} run function mph:brewer/dispense
+execute if data block ~ ~ ~ {BurnTime: 0s} unless block ~ ~ ~ minecraft:furnace{Items:[{id:"minecraft:suspicious_stew",Count:1b,tag:{ac_gas:1b}}]} unless block ~ ~ ~ minecraft:furnace{Items:[]} run function mph:brewer/dispense
 
 #moving the gas into fuel section
-execute if block ~ ~ ~ minecraft:furnace{Items:[{Slot:0b,id:"minecraft:suspicious_stew",Count:1b,tag:{Tags:["ac_fuel_gas"]}}]} run data modify block ~ ~ ~ Items[{Slot:0b}].Slot set value 1
+execute if block ~ ~ ~ minecraft:furnace{Items:[{Slot:0b,id:"minecraft:suspicious_stew",Count:1b,tag:{ac_gas:1b}}]} run data modify block ~ ~ ~ Items[{Slot:0b}].Slot set value 1
 
 #heating the brewer with gas
-execute if block ~ ~ ~ minecraft:furnace{Items:[{Slot:1b,id:"minecraft:suspicious_stew",Count:1b,tag:{Tags:["ac_fuel_gas"]}}]} if block ~ ~ ~ minecraft:furnace{Items:[{Slot:0b,id:"minecraft:rabbit",Count:1b,tag:{Tags:["ac_placeholder_crafting_item"]}}]} run data merge block ~ ~ ~ {BurnTime: 1000s}
+execute if block ~ ~ ~ minecraft:furnace{Items:[{Slot:1b,id:"minecraft:suspicious_stew",Count:1b,tag:{ac_gas:1b}}]} if block ~ ~ ~ minecraft:furnace{Items:[{Slot:0b,id:"minecraft:rabbit",Count:1b,tag:{Tags:["ac_placeholder_crafting_item"]}}]} run data merge block ~ ~ ~ {BurnTime: 1000s}
 
 
 ###FINISH COOKING###
@@ -18,7 +18,7 @@ execute if data block ~ ~ ~ {CookTime:190s} run function mph:brewer/product
 
 #exploding if the brewer is hot
 execute if data block ~ ~ ~ {BurnTime: 999s} unless block ~ ~ ~ minecraft:furnace{Items:[{Slot:0b,id:"minecraft:rabbit",Count:1b,tag:{Tags:["ac_placeholder_crafting_item"]}}]} unless block ~ ~ ~ minecraft:furnace{Items:[{Slot:2b}]} at @s run function mph:brewer/explosion
-execute if data block ~ ~ ~ {BurnTime: 999s} unless block ~ ~ ~ minecraft:furnace{Items:[{Slot:1b,id:"minecraft:suspicious_stew",Count:1b,tag:{Tags:["ac_fuel_gas"]}}]} unless block ~ ~ ~ minecraft:furnace{Items:[{Slot:2b}]} at @s run function mph:brewer/explosion
+execute if data block ~ ~ ~ {BurnTime: 999s} unless block ~ ~ ~ minecraft:furnace{Items:[{Slot:1b,id:"minecraft:suspicious_stew",Count:1b,tag:{ac_gas:1b}}]} unless block ~ ~ ~ minecraft:furnace{Items:[{Slot:2b}]} at @s run function mph:brewer/explosion
 
 
 
