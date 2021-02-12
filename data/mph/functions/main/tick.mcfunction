@@ -1,4 +1,6 @@
-#execute at @e[ type= item, nbt={Item:{id: "minecraft:paper", Count: 1b}}] run execute if entity @e[distance=..1, type= item, nbt={Item:{id: "minecraft:jungle_leaves", Count: 1b}}] run say hi
+#execute at @e[ type= item, nbt={Item:{id: "minecraft:paper", Count: 1b}}] run execute if entity @e[distance=..1, type= item, nbt={Item:{id: "minecraft:jungle_leaves", Count: 1b}}] run say hi#
+
+## CUSTOM MODEL DATA: 240001 AND UP ##
 
 ## JOINT ##
 execute at @e[ type= item, nbt={Item:{id: "minecraft:paper", Count: 1b}}] run execute if entity @e[distance=..1, type= item, nbt={Item:{id: "minecraft:jungle_leaves", Count: 1b}}] run summon item ~ ~ ~ {Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{Tags:["ac_joint"],display:{Name:'{"text":"Joint","color":"green","bold":true}',Lore:['{"text":"Smoke me to get high bro!","italic":true}']},HideFlags:63}}}
@@ -13,8 +15,17 @@ execute as @e[type=armor_stand,tag=brewer] at @s if block ~ ~ ~ air run function
 # Brewer brewing
 execute as @e[type=armor_stand,tag=brewer] at @s run function mph:brewer/brewing
 
-## EFFECTS ##
-execute as @e[ tag=ac_effect_tagged ] at @e[ tag=ac_effect_tagged ] run function mph:effects/triggereffects
+
+## CHEMISTRY TABLE ##
+# Chemistry table place
+execute as @e[type=armor_stand,tag=c_t_place] at @s run function mph:c_table/place
+# Chemistry table mine
+execute as @e[type=armor_stand,tag=c_table] at @s if block ~ ~ ~ air run function mph:c_table/mine
+
+
+
+## CONSUMING ##
+function mph:eating/eatgas
 
 
 ## EPHEDRINE ##
