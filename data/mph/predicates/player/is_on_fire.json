@@ -1,0 +1,20 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "is_fire": true,
+    "type": "minecraft:player",
+    "flags": {
+      "is_on_fire": true
+    }
+  },
+  "term": {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {}
+  },
+  "scores": {},
+  "terms": [],
+  "chance": 0,
+  "looting_multiplier": 0
+}
