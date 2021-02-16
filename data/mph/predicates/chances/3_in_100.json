@@ -1,0 +1,7 @@
+{
+  "condition": "minecraft:random_chance",
+  "chance": 0.03,
+  "predicate": {},
+  "looting_multiplier": 0,
+  "entity": "this"
+}
