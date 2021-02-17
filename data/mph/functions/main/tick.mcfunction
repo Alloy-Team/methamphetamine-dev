@@ -23,8 +23,8 @@ execute as @e[type=armor_stand,tag=c_t_place] at @s run function mph:c_table/pla
 execute as @e[type=armor_stand,tag=c_table] at @s if block ~ ~ ~ air run function mph:c_table/mine
 
 
-## CONSUMING ##
-function mph:eating/eatgas
+## EFFECTS ##
+execute as @e[ tag=ac_effect_tagged ] at @e[ tag=ac_effect_tagged ] run function mph:effects/triggereffects
 
 ## IODINE ##
 execute as @e[scores={mph_iron_mined=1..}] at @s if predicate mph:chances/3_in_100 at @s run function mph:misc/iodine_drop
