@@ -9,18 +9,18 @@ execute at @e[ type= item, nbt={Item:{id: "minecraft:paper", Count: 1b}}] run ex
 
 ## BREWER ##
 # Brewer place
-execute as @e[type=armor_stand,tag=b_place] at @s run function mph:brewer/place
+execute as @e[type=armor_stand,tag=b_place] at @s run function mph:benches/brewer/place
 # Brewer mine
-execute as @e[type=armor_stand,tag=brewer] at @s if block ~ ~ ~ air run function mph:brewer/mine
+execute as @e[type=armor_stand,tag=brewer] at @s if block ~ ~ ~ air run function mph:benches/brewer/mine
 # Brewer brewing
-execute as @e[type=armor_stand,tag=brewer] at @s run function mph:brewer/brewing
+execute as @e[type=armor_stand,tag=brewer] at @s run function mph:benches/brewer/brewing
 
 
 ## CHEMISTRY TABLE ##
 # Chemistry table place
-execute as @e[type=armor_stand,tag=c_t_place] at @s run function mph:c_table/place
+execute as @e[type=armor_stand,tag=c_t_place] at @s run function mph:benches/c_table/place
 # Chemistry table mine
-execute as @e[type=armor_stand,tag=c_table] at @s if block ~ ~ ~ air run function mph:c_table/mine
+execute as @e[type=armor_stand,tag=c_table] at @s if block ~ ~ ~ air run function mph:benches/c_table/mine
 
 
 ## EFFECTS ##
