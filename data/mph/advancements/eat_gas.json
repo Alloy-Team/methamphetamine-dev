@@ -5,7 +5,7 @@
             "conditions": {
                 "item": {
                     "item": "suspicious_stew",
-                    "nbt": "{ac_gas:1b}"
+                    "nbt": "{mph_gas:1b}"
                 }
             }
         }
