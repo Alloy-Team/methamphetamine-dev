@@ -1,5 +1,5 @@
 #kills the dropped dispenser item
-kill @e[type=item,nbt={Item:{id:"minecraft:dispenser",Count:1b,tag:{display:{Name:'{"text":"Chemistry Table","color":"blue","bold":true,"italic":false}'}}}}]
+kill @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:dispenser",Count:1b}}]
 #kills armor stand
 kill @s
 #summons pickable placable furnace spawning armor stand
