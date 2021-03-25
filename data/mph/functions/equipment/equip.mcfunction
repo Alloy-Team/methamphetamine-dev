@@ -1,0 +1,2 @@
+execute as @a[ scores= {mph_click_cs = 1}, nbt= {SelectedItem: {id:"minecraft:carrot_on_a_stick", tag:{mph_gasmask:1b}}}] run function mph:equipment/gasmask/gasmaskwear
+execute as @a[ nbt= {Inventory:[{Slot:103b, id: "minecraft:carrot_on_a_stick", Count: 1b, tag: {mph_gasmask: 1b}}]} ] run function mph:equipment/gasmask/gasmask

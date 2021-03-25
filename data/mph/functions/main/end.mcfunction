@@ -2,3 +2,5 @@
 scoreboard players set @s mph_ephedrine 0
 
 scoreboard players set @s mph_iron_mined 0
+
+scoreboard players set @s mph_click_cs 0

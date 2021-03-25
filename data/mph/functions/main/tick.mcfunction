@@ -20,17 +20,17 @@ execute as @e[type=armor_stand,tag=c_t_place] at @s run function mph:benches/c_t
 # Chemistry table mine
 execute as @e[type=armor_stand,tag=c_table] at @s if block ~ ~ ~ air run function mph:benches/c_table/mine
 
-
 ## EFFECTS ##
 execute as @e[ tag=mph_effect_tagged ] at @e[ tag=mph_effect_tagged ] run function mph:effects/triggereffects
 
 ## IODINE ##
 execute as @e[scores={mph_iron_mined=1..}] at @s if predicate mph:chances/3_in_100 at @s run function mph:misc/iodine_drop
 
+## EQUIPMENT ##
+execute as @a run function mph:equipment/equip
 
 ## EPHEDRINE ##
 execute as @e[scores={mph_ephedrine=1..}] at @s if predicate mph:chances/1_in_10 run summon item ^ ^1.2 ^ {PickupDelay:20,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:tall_grass",Count:1b,tag:{display:{Name:'{"text":"Ephedra","color":"green","italic":false}'},ephedra:1b}}}
-
 
 #end
 execute as @a at @s run function mph:main/end
